@@ -1,0 +1,15 @@
+.profile__name-button {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 480px) {
+  .profile__name-button {
+    margin-bottom: 14px;
+  }
+}
