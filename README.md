@@ -16,4 +16,4 @@ JS
 
 ## Ссылка на github
 
-https://ya-strannik0013.github.io/mesto/
+https://ya-strannik0013.github.io/mesto-az/
