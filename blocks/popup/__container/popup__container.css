@@ -3,13 +3,14 @@
   padding: 0;
   position: relative;
   max-width: 430px;
+  max-height: 330px;
   background: #fff;
   border-radius: 10px;
   color: #000;
 }
 @media screen and (max-width: 618px) {
   .popup__container {
-    max-width: 282px;
+    width: 282px;
   }
 }
 

@@ -6,8 +6,8 @@
   outline: none;
   width: 40px;
   height: 40px;
-  top: -35px;
-  right: -45px;
+  top: -40px;
+  right: -50px;
   cursor: pointer;
   background: url(../../../images/closeicon.svg) transparent no-repeat;
 }
@@ -21,8 +21,8 @@
   .popup__close-button {
     width: 26px;
     height: 26px;
-    top: -42px;
-    right: 0;
+    top: -37px;
+    right: -6px;
     background-size: 20px 20px;
   }
 }
