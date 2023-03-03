@@ -20,8 +20,9 @@
   transition: border .1s ease-in-out;
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 890px) {
   .profile__edit-button {
+    margin-top: 4px;
     margin-left: 10px;
     width: 18px;
     height: 18px;
