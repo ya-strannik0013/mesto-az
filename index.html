@@ -9,85 +9,70 @@
   </head>
   <body class="root">
     <header class="header">
-      <img class="header__logo" src="./images/logo.svg"  alt="Логотип">
+      <img class="header__logo" src="./images/logo.svg" alt="Логотип">
     </header>
-    <main>
+    <main class="content">
       <section class="profile">
         <img class="profile__avatar" src="./images/avatar.png" alt="аватар">
         <div class="profile__info">
           <div class="profile__name-button">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button  class="profile__edit-button" type="button"></button>
+            <button class="profile__edit-button" type="button" aria-label="Редактировать"></button>
           </div>
           <p class="profile__subtitle">Исследователь океана</p>
         </div>
-        <button class="profile__add-button" type="button"></button>
+        <button class="profile__add-button" type="button" aria-label="Добавить карточку"></button>
       </section>
-      <section class="elements">
-        <ul class="elements__card">
-          <li class="elements__item">
-            <img class="elements__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
-            <div class="elements__description">
-                <h2 class="elements__description-title">Карачаевск</h2>
-                <button  class="elements__like" type="button">
-                </button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__image" src="./images/elbrus.jpg" alt="Гора Эльбрус">
-            <div class="elements__description">
-                <h2 class="elements__description-title">Гора Эльбрус</h2>
-                <button  class="elements__like" type="button">
-                </button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__image" src="./images/dombue.jpg" alt="Домбай">
-            <div class="elements__description">
-                <h2 class="elements__description-title">Домбай</h2>
-                <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__image" src="./images/elbrus.jpg" alt="Гора Эльбрус">
-            <div class="elements__description">
-                <h2 class="elements__description-title">Гора Эльбрус</h2>
-                <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__image" src="./images/dombue.jpg" alt="Домбай">
-            <div class="elements__description">
-                <h2 class="elements__description-title">Домбай</h2>
-                <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-          <li class="elements__item">
-            <img class="elements__image" src="./images/karachaevsk.jpg" alt="Карачаево-Черкессия">
-            <div class="elements__description">
-                <h2 class="elements__description-title">Карачаево-Черкессия</h2>
-                <button class="elements__like" type="button"></button>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
+      <section class="elements"></section>
+    </main> 
     <footer class="footer">
       <p class="footer__copyright">&copy; 2023 Aleksandr Zenkevich</p>
     </footer>
-    <!-- Всплывающее окно для изменений в профиле-->
-    <section class="popup">
+    <section class="popup" id="edit_popup">
       <div class="popup__container">
         <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
-        <form class="popup__content" name="userForm" method="post">
+        <form class="popup__content" name="userForm" method="post" id="popup_edit">
           <h3 class="popup__title">Редактировать профиль</h3>
-          <input class="popup__input" name="username" type="text" id="nameInput" value="Жак-Ив Кусто">
-          <input class="popup__input" name="description" type="text" id="jobInput" value="Исследователь океана">
-          <button class="popup__save-button" type="submit">Сохранить</button>
+          <input class="popup__input" name="username" type="text" id="popup_name" placeholder="Имя">
+          <input class="popup__input" name="description" type="text" id="popup_text" placeholder="Описание">
+          <button class="popup__save-button" type="submit" aria-label="Сохранить">Сохранить</button>
         </form>
       </div>
     </section>
+    <section>
+      <div class="popup" id="add_popup">
+        <div class="popup__container">
+          <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
+          <form class="popup__content" name="userForm" method="post" id="popup_add">
+            <h3 class="popup__title">Новое место</h3>
+            <input class="popup__input" name="username" type="text" id="popup_title" placeholder="Название">
+            <input class="popup__input" name="imageurl" type="text" id="popup_link" placeholder="Ссылка на картинку">
+            <button class="popup__save-button" type="submit" aria-label="Сохранить">Сохранить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="popup popup_opacity" id="image_popup">
+        <div class="popup__image-content">
+          <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
+          <figure class="popup__figure">
+            <img class="popup__image" src="#">
+            <figcaption class="popup__image-caption"></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <template class="element-item-template">
+      <article class="element">
+        <button class="element__delete" type="button" aria-label="Удалить"></button>  
+        <img src="" class="element__image">
+        <div class="element__group">
+          <h2 class="element__title"></h2>
+          <button class="element__icon" type="button" aria-label="Нравится"></button>
+        </div>
+      </article>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
-
