@@ -6,14 +6,12 @@ const popupText = document.getElementById('popup_text');
 const title = document.querySelector('.profile__name');
 const subtitle = document.querySelector('.profile__subtitle');
 const popupEdit = document.getElementById('popup_edit');
-
 const addPopup = document.getElementById('add_popup');
 const addPopupBtn = document.querySelector('.profile__add-button');
 const closeAddPopupBtn = addPopup.querySelector('.popup__close-button');
 const addNameInput = document.getElementById('popup_title');
 const addLinkInput = document.getElementById('popup_link');
 const popupAdd = document.getElementById('popup_add');
-
 const elements = document.querySelector('.elements');
 const imagePopup = document.getElementById('image_popup');
 const closeImagePopupBtn = imagePopup.querySelector('.popup__close-button');
